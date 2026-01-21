@@ -1,0 +1,23 @@
+language: bash 
+services:
+  - docker
+before_install:
+  - echo "Starting Docker build docker image..."
+  
+script:
+- docker compose build
+before_deploy:
+  - echo "Deploying the Docker image..."
+deploy:
+  provider: script
+  script: docker push vicentesimao/simple-app:latest
+  on:
+    branch: main
+
+#notifications:
+#  email:
+#    on_success: never
+#    on_failure: always
+
+notifications: 
+  email: false
