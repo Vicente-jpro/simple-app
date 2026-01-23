@@ -1,5 +1,10 @@
 ### AWS JSON
 It stil need to be fixed.
+
+```sh
+aws sts get-caller-identity
+```
+
 ```json
 {
     "family": "task01",
