@@ -10,7 +10,6 @@ permissions:
   contents: write
   pull-requests: write
   issues: write
-  id-token: write
 
 jobs:
   build:
@@ -48,9 +47,10 @@ jobs:
       uses: actions/checkout@v3
 
     - name: Configure AWS credentials
-      uses: aws-actions/configure-aws-credentials@v4 # More information on this action can be found below in the 'AWS Credentials' section
+      uses: aws-actions/configure-aws-credentials@v4
       with:
-        role-to-assume: arn:aws:iam::176276968564:role/AWSServiceRoleForECS
+        aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+        aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
         aws-region: ${{ secrets.AWS_DEFAULT_REGION }}
 
     - name: Login to Amazon ECR
