@@ -10,7 +10,7 @@ class HelloControllerTest {
     void testHelloEndpointReturnsCorrectMessage() {
         HelloController controller = new HelloController();
         String result = controller.hello();
-        assertThat(result).isEqualTo("Hello from simple_app!");
+        assertThat(result).isEqualTo("Hello from simple_app!###############");
     }
 
     @Test
