@@ -5,6 +5,49 @@ It stil need to be fixed.
 aws sts get-caller-identity
 ```
 
+### Set enviroment variable for github actions
+
+```sh
+AWS_ACCESS_KEY_ID = change_me
+```
+
+```sh
+AWS_SECRET_ACCESS_KEY = change_me
+```
+```sh
+AWS_DEFAULT_REGION = change_me
+```
+
+```sh
+ECR_REGISTERY = change_me
+```
+
+```sh
+ECR_REPOSITORY
+```
+
+```sh
+IMAGE_REPO_URL = change_me
+```
+
+```sh
+CLUSTER_NAME = change_me
+```
+
+```sh
+SERVICE_NAME = change_me
+```
+
+```sh
+TASK_DEFINITION_NAME = change_me
+```
+
+```sh
+CONTAINER_NAME = change_me
+```````````````````
+
+
+
 ```json
 {
     "family": "task01",
