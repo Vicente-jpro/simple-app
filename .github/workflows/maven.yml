@@ -60,6 +60,7 @@ jobs:
         REPOSITORY: ${{ secrets.ECR_REPOSITORY }}
     #    IMAGE_TAG: ${{ github.sha }}
       run: |
+        aws ecr get-login-password --region ${{ secrets.AWS_DEFAULT_REGION }} | docker login --username AWS --password-stdin ${{ secrets.AWS_DEFAULT_REGION }}
         docker build -t vicentesimao/${{ secrets.ECR_REPOSITORY }}:latest .
         docker tag vicentesimao/${{ secrets.ECR_REPOSITORY }}:latest ${{ secrets.ECR_REGISTERY }}/${{ secrets.ECR_REPOSITORY }}:latest
         docker push ${{ secrets.ECR_REGISTERY }}/${{ secrets.ECR_REPOSITORY }}:latest        
