@@ -27,6 +27,6 @@ class SimpleAppApplicationTests {
 	void testControllerHelloMethod() {
 		// Verify the controller's hello method returns expected value
 		String result = helloController.hello();
-		assertThat(result).isEqualTo("Hello from simple_app!###############");
+		assertThat(result).isEqualTo("Hello from simple_app AAAAA!###############");
 	}
 }
